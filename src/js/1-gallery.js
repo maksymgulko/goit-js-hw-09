@@ -67,8 +67,6 @@ const images = [
   },
 ];
 
-// const [{ preview, original, description }] = images;
-
 const imgList = document.querySelector('.gallery');
 const markup = images
   .map(
@@ -87,17 +85,12 @@ const markup = images
 
 imgList.innerHTML = markup;
 
-// imgList.addEventListener('click', event => {
-//   event.preventDefault();
-// });
-
-document.addEventListener('DOMContentLoaded', () => {
-  new SimpleLightbox('.gallery-link', {
-    captions: true,
-    captionSelector: 'img',
-    captionType: 'attr',
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
+new SimpleLightbox('.gallery-link', {
+  captions: true,
+  captionSelector: 'img',
+  captionType: 'attr',
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  download: false,
 });
