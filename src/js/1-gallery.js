@@ -86,11 +86,6 @@ const markup = images
 imgList.innerHTML = markup;
 
 new SimpleLightbox('.gallery-link', {
-  captions: true,
-  captionSelector: 'img',
-  captionType: 'attr',
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
-  download: false,
 });
